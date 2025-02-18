@@ -3,10 +3,17 @@ import MailBox from './MailBox';
 import FavBooks from './FavBooks';
 import { favBooks } from '../books';
 import Card from './Card';
+import Alert from './Alert';
+import UserMenu from './UserMenu';
+import Button from './Button';
+import clsx from 'clsx';
+import css from '../index.module.css';
 
 export default function App() {
   return (
-    <div>
+    <div className={clsx(css.container)}>
+      <UserMenu>Hello</UserMenu>
+
       <MailBox username="Mango" messages={[1, 2, 3, 4, 5]} />
 
       <h1>Best selling</h1>
@@ -25,9 +32,30 @@ export default function App() {
       <FavBooks books={favBooks} />
 
       <Card>
-        <h2>Card title</h2>
+        <h2 className={css['section-title']}>Card title</h2>
         <p>Text between opening and closing tag</p>
       </Card>
+
+      <Alert variant="info">
+        Would you like to browse our recommended products?
+      </Alert>
+      <Alert variant="error" outlined>
+        There was an error during your last transaction
+      </Alert>
+      <Alert variant="success" elevated>
+        Payment received, thank you for your purchase
+      </Alert>
+      <Alert variant="warning" outlined elevated>
+        Please update your profile contact information
+      </Alert>
+
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="danger">Danger</Button>
+      <Button variant="primary" disabled>
+        Disabled
+      </Button>
     </div>
   );
 }

@@ -1,0 +1,60 @@
+.button {
+  display: block;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.primary {
+  composes: button;
+  background-color: #007bff;
+  color: white;
+}
+
+.primary:not(:disabled):hover,
+.primary:not(:disabled):focus {
+  background-color: #0056b3;
+}
+
+.secondary {
+  composes: button;
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary:hover,
+.secondary:focus {
+  background-color: #545b62;
+}
+
+.success {
+  composes: button;
+  background-color: #28a745;
+  color: white;
+}
+
+.success:hover,
+.success:focus {
+  background-color: #218838;
+}
+
+.danger {
+  composes: button;
+  background-color: #dc3545;
+  color: white;
+}
+
+.danger:hover,
+.danger:focus {
+  background-color: #c82333;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
