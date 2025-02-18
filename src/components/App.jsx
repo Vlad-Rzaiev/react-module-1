@@ -7,7 +7,7 @@ import Card from './Card';
 export default function App() {
   return (
     <div>
-      <MailBox username="Mango" messages={[]} />
+      <MailBox username="Mango" messages={[1, 2, 3, 4, 5]} />
 
       <h1>Best selling</h1>
 
